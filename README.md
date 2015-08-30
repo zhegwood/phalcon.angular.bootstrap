@@ -12,3 +12,5 @@ SendGrid account www.sendgrid.com
 bootstrap.sql is a basic database with users and roles tables
 
 mod_rewrite must be enabled on the server
+
+Implementation can be seen at http://104.131.144.103:8080/
