@@ -1,0 +1,51 @@
+<section class="container" data-ng-controller="CreateAccount">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 col-xs-12">
+            <h1>Create User Account</h1>
+        </div>
+    </div>
+    <form data-ng-show="!signupSuccess">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 col-xs-12 form-group">
+                <label>Email Address</label>
+                <input type="text" class="form-control" data-ng-model="user.email" data-ng-blur="validEmail()" />
+            </div>
+            <div class="col-sm-6 col-sm-offset-3 col-xs-12 form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" data-ng-model="user.password" />
+            </div>
+            <div class="col-sm-6 col-sm-offset-3 col-xs-12 form-group">
+                <label>Confirm Password</label>
+                <input type="password" class="form-control" data-ng-model="user.confirm" />
+            </div>
+            <div class="col-sm-6 col-sm-offset-3 col-xs-12 form-group">
+                <ishuman></ishuman>
+            </div>
+            <div class="col-sm-6 col-sm-offset-3 col-xs-12 form-group margin-bottom-0">
+                <label>Terms of Service</label>
+                <div class="tos">
+                    <div data-ng-include="'/app/shared/partials/tos.html'"></div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-sm-offset-3 col-xs-12 form-group text-right">
+                <label><input type="checkbox" data-ng-model="user.agree" /> I agree to the Terms of Service</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 col-xs-12 text-right">
+                <input type="submit" value="Create Account" class="btn btn-success"
+                data-ng-disabled="saving"
+                data-ng-click="createAccount()"/>
+            </div>
+        </div>
+    </form>
+    <div class="row" data-ng-show="signupSuccess" data-ng-cloak>
+        <div class="col-sm-6 col-sm-offset-3 col-xs-12">
+            <p>Thank you for creating an account!</p>
+            <p>You should be getting an email to confirm your account soon.  Click on the link and your account will be active!</p>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="/lib/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/lib/jquery-ui/jquery-ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="/app/controllers/CreateAccount.js"></script>

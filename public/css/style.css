@@ -1,0 +1,79 @@
+/* Bootstrap Overrides */
+.navbar-brand {
+  padding: 5px;
+}
+
+/* Global Styles */
+html {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+body {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.content {
+  padding-bottom: 6em;
+}
+
+.global-message {
+  left: 0;
+  position: fixed;
+  top: 3.75em;
+  width: 100%;
+  z-index:10;
+}
+.global-message .alert {
+    padding: .5em;
+}
+
+/***** Human slider styles */
+.human {
+  padding: 0 0 1rem;
+  position: relative;
+}
+.human .human-slider {
+    margin: .2rem 0 0 3rem;
+}
+.human .slider-value {
+    bottom: 1rem;
+    color: @black;
+    position: absolute;
+    left: .5rem;
+}
+/***** End Human Slider styles */
+
+.tos {
+  .rounded-corners(4px);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  min-height:5em;
+  max-height:7em;
+  overflow: auto;
+  padding: .5em;
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: #f8f8f8;
+  border-top: 1px solid #e7e7e7;
+  bottom: 0;
+  height: 4em;
+  left: 0;
+  padding: 5px;
+  position: fixed;
+  right: 0;
+}
