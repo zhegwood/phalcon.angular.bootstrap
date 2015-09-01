@@ -1,5 +1,5 @@
 # phalcon.angular.bootstrap
-Bootstrap for a non single page implementation of Angular, Phalcon, and Bootstrap.  Has a user signup, activation email (using SendGrid), and user login to a secure page built-in.
+Biolerplate for a non single page implementation of Angular, Phalcon, and Bootstrap.  Has a user creation, activation email (using SendGrid), user login to a secure page, and role management to an admin page
 
 Requirements:
 Phalcon www.phalconphp.com
