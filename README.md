@@ -1,6 +1,6 @@
 # phalcon.angular.bootstrap
 
-I'm currently working on changing this to something that will migrate better to Angular 2.  Stay tuned...
+I'm currently working on changing the UI/Angular code to something that will migrate better to Angular 2.  Stay tuned...
 
 Biolerplate for a non single page implementation of Angular, Phalcon, and Bootstrap.  Has a user creation, activation email (using SendGrid), user login to a secure page, and role management to an admin page
 
