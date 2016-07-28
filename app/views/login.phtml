@@ -1,4 +1,4 @@
-<section class="container" data-ng-controller="Login">
+<section class="container" ng-controller="LoginController">
     <div class="row">
         <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
             <h1>Login</h1>
@@ -8,26 +8,26 @@
         <div class="row">
             <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 form-group">
                 <label>Email Address</label>
-                <input type="text" class="form-control" data-ng-model="user.email" />
+                <input type="text" class="form-control" ng-model="user.email" />
             </div>
             <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 form-group">
                 <label>Password</label>
-                <input type="password" class="form-control" data-ng-model="user.password" />
+                <input type="password" class="form-control" ng-model="user.password" />
             </div>
             <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 checkbox text-right">
                 <label>
                     <input type="checkbox"
-                        data-ng-model="user.remember"
-                        data-ng-true-value="true"
-                        data-ng-false-value="false" />Remember Me
+                        ng-model="user.remember"
+                        ng-true-value="true"
+                        ng-false-value="false" />Remember Me
                 </label>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 text-right">
                 <button type="submit" class="btn btn-success"
-                data-ng-disabled="loggingIn"
-                data-ng-click="login()">Login</button>
+                ng-disabled="processing"
+                ng-click="login()">Login</button>
             </div>
         </div>
     </form>
@@ -37,5 +37,5 @@
         </div>
     </div>
 </section>
-
+<script type="text/javascript" src="/app/services/UserService.js"></script>
 <script type="text/javascript" src="/app/controllers/Login.js"></script>

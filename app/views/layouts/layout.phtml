@@ -20,11 +20,11 @@
         
         <!-- Bootstrap -->
         <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="/lib/jquery-ui/jquery-ui.min.css" rel="stylesheet"/>
+        <link href="//code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
         <link href="/css/style.css" rel="stylesheet"/>
         
         <!-- jQuery -->
-        <script src="/lib/jquery/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         
         <!-- Angular main files -->
         <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
@@ -34,8 +34,8 @@
         <!-- BootStrap -->
         <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
     </head>
-    <body data-ng-app="Bootstrap">
-        <header data-ng-controller="MainMenu">
+    <body ng-app="Bootstrap">
+        <header>
             <nav class="navbar navbar-default" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -50,19 +50,19 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li data-ng-if="user_loaded && !user" data-ng-cloak>
+                            <li ng-if="user_loaded && !user" ng-cloak>
                                 <a href="/create-account">Create Account</a>
                             </li>
-                            <li data-ng-if="user_loaded && !user" data-ng-cloak>
+                            <li ng-if="user_loaded && !user" ng-cloak>
                                 <a href="/login">Login</a>
                             </li>
-                            <li data-ng-if="user_loaded && user" data-ng-cloak>
+                            <li ng-if="user_loaded && user" ng-cloak>
                                 <a href="/secure">Secure Page</a>
                             </li>
-                            <li class="dropdown" data-ng-if="user_loaded && user" data-ng-cloak>
+                            <li class="dropdown" ng-if="user_loaded && user" ng-cloak>
                                 <a href="/users/view/{{user.id}}" class="dropdown-toggle" data-toggle="dropdown">{{user.email}} <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li data-ng-if="user.role_id == 2"><a href="/admin">Admin</a></li>
+                                    <li ng-if="user.role_id == 2"><a href="/admin">Admin</a></li>
                                     <li><a href="/logout">Logout</a></li>
                                 </ul>
                             </li>
@@ -71,24 +71,24 @@
                 </div>
             </nav>
         </header>
-        <div class="container content" data-ng-controller="Base">
+        <div class="container content">
             <div class="container global-message">
                 <div class="row">
                     <div class="col-xs-12 col-md-4 col-md-offset-4">
-                        <div data-ng-show="errorMessage != ''" data-ng-cloak>
+                        <div ng-show="errorMessage != ''" ng-cloak>
                             <div class="alert alert-danger">
-                                <button type="button" class="close" data-ng-click="errorMessage=''">
+                                <button type="button" class="close" ng-click="errorMessage=''">
                                     <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                                 </button>
-                                <div data-ng-bind-html="errorMessage"></div>
+                                <div ng-bind-html="errorMessage"></div>
                             </div>
                         </div>
-                        <div data-ng-show="successMessage != ''" data-ng-cloak>
+                        <div ng-show="successMessage != ''" ng-cloak>
                             <div class="alert alert-success">
-                                <button type="button" class="close" data-ng-click="successMessage=''">
+                                <button type="button" class="close" ng-click="successMessage=''">
                                     <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                                 </button>
-                                <div data-ng-bind-html="successMessage"></div>
+                                <div ng-bind-html="successMessage"></div>
                             </div>
                         </div>
                     </div>
@@ -100,9 +100,6 @@
             Footer 
         </footer>
         <script type="text/javascript" src="/app/shared/directives/directives.js"></script>
-        <script type="text/javascript" src="/app/shared/services/Util.js"></script>
         <script type="text/javascript" src="/app/shared/services/CallCenter.js"></script>
-        <script type="text/javascript" src="/app/shared/controllers/MainMenu.js"></script>
-        <script type="text/javascript" src="/app/shared/controllers/Base.js"></script>
     </body>
 </html>

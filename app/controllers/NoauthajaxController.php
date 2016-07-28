@@ -13,9 +13,7 @@ class NoauthajaxController extends ControllerBase {
     public function createaccountAction() {
         $response = $this->getResponse();
         $request = $this->getRequest();
-        
         $user = new User();
-        
         if ($user->saveUser($request)) {
             $response['success'] = true;
             $response['data']['user'] = $user;

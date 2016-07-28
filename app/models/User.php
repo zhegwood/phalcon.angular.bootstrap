@@ -71,6 +71,10 @@ class User extends Model {
         $this->hasOne('role_id','Role','id');
     }
     
+    public function afterFetch() {
+        $this->role = $this->role;
+    }
+    
     public function validation() {
         $this->validate(new PresenceOf(
             array(
